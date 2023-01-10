@@ -2,6 +2,9 @@ package io.pivotal.literx;
 
 import reactor.core.publisher.Flux;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Learn how to create Flux instances.
  *
@@ -28,7 +31,10 @@ public class Part01Flux {
 
 	// TODO Create a Flux from a List that contains 2 values "foo" and "bar"
 	Flux<String> fooBarFluxFromList() {
-		return null;
+		List<String> list = new ArrayList<>();
+		list.add("foo");
+		list.add("bar");
+		return Flux.fromIterable(list);
 	}
 
 //========================================================================================
