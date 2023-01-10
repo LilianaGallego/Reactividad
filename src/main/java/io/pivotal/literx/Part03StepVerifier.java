@@ -16,6 +16,7 @@
 
 package io.pivotal.literx;
 
+import java.nio.ByteBuffer;
 import java.util.function.Supplier;
 
 import io.pivotal.literx.domain.User;
@@ -55,7 +56,13 @@ public class Part03StepVerifier {
 	// TODO Use StepVerifier to check that the flux parameter emits a User with "swhite"username
 	// and another one with "jpinkman" then completes successfully.
 	void expectSkylerJesseComplete(Flux<User> flux) {
-		fail();
+		StepVerifier
+				.create(flux)
+				.expectNextMatches(u-> u.getUsername().equals("swhite"))
+				.expectNextMatches(u-> u.getUsername().equals("jpinkman"))
+				.verifyComplete();
+
+
 	}
 
 //========================================================================================
