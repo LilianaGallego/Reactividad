@@ -17,6 +17,7 @@
 package io.pivotal.literx;
 
 import java.nio.ByteBuffer;
+import java.time.Duration;
 import java.util.function.Supplier;
 
 import io.pivotal.literx.domain.User;
@@ -69,7 +70,10 @@ public class Part03StepVerifier {
 
 	// TODO Expect 10 elements then complete and notice how long the test takes.
 	void expect10Elements(Flux<Long> flux) {
-		fail();
+		StepVerifier
+				.create(flux)
+				.expectNextCount(10)
+				.verifyComplete();
 	}
 
 //========================================================================================
