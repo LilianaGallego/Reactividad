@@ -4,7 +4,9 @@ import io.pivotal.literx.domain.User;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.util.Collection;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Learn how to use various other operators.
@@ -60,7 +62,7 @@ public class Part08OtherOperations {
 
 	// TODO Convert the input Flux<User> to a Mono<List<User>> containing list of collected flux values
 	Mono<List<User>> fluxCollection(Flux<User> flux) {
-		return null;
+		Mono<List<User>> mono1= flux.collectList();
+		return mono1;
 	}
-
 }
