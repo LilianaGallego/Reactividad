@@ -1,24 +1,28 @@
-# Lite Rx API Hands-on
+# KATA OPERADORES REACTIVOS
 
-This Hands-on is designed to help you to learn easily the lite Rx API provided by [Reactor Core 3.x](https://github.com/reactor/reactor-core/).
+Se desarrollan los ejercicios propuestos de la Kata para operadores reactivos [Reactor Core 3.x](https://github.com/reactor/reactor-core/).
 
-You will mostly need these 3 classes Javadoc:
+Se usaron las siguientes clases de Javadoc:
 
  - [Flux](https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html)
  - [Mono](https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html)
  - [StepVerifier](https://projectreactor.io/docs/test/release/api/reactor/test/StepVerifier.html)
+ - [Observable](https://docs.oracle.com/javase/7/docs/api/java/util/Observable.html)
+ - [Flowable](http://reactivex.io/RxJava/3.x/javadoc/io/reactivex/rxjava3/core/Flowable.html)
  
-To do this Hands-on, you just have to:
+Para la ejecución del proyecto se necesita:
 
- - Have [Java 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) and a Java IDE ([IntelliJ IDEA](https://www.jetbrains.com/idea/) for example) installed with Maven support
- - Clone this repository (or your fork)
- - Import the project as a Maven one in your IDE
- - Make sure that the language level is set to Java 8 in your IDE project settings
- - Fix the TODO one by one in Part01 to Part11 main classes in `io.pivotal.literx` package
-   to make unit tests green (you can have a look at the unit tests too if you want)
+ - Tener [Java 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) y un IDE ([IntelliJ IDEA](https://www.jetbrains.com/idea/) por ejemplo) que soporte MAVEN
+ - Se debe clonar el repositorio.
+ - Importar las dependencias MAVEN.
+ - Configurar el IDE a Java 8.
+ - Se realizaron los TODO para cada parte del 1 al 11 y se llevó a cabo el test de verificación.
 
-The solution is available in the `solution` branch to compare, when you have finished, with what you have done.
+*[Personas-Desarrolladores del Proyecto](#personas-desarrolladores)
+- Martha Liliana Gallego Murillo      
+correo: lilianagallegom@gmail.com
+- David Santiago Benjumea Pérez  
+correo: dsbpim@gmail.com
 
-A Kotlin version that takes advantage of [reactor-kotlin-extensions](https://github.com/reactor/reactor-kotlin-extensions) is available [here](https://github.com/eddumelendez/reactor-kotlin-workshop).
- 
-More information available on [Reactor website](https://projectreactor.io).
+
+
