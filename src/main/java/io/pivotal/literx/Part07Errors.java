@@ -20,6 +20,7 @@ import io.pivotal.literx.domain.User;
 import reactor.core.Exceptions;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+import reactor.test.StepVerifier;
 
 /**
  * Learn how to deal with errors.
@@ -33,7 +34,7 @@ public class Part07Errors {
 
 	// TODO Return a Mono<User> containing User.SAUL when an error occurs in the input Mono, else do not change the input Mono.
 	Mono<User> betterCallSaulForBogusMono(Mono<User> mono) {
-		return null;
+		return mono.onErrorReturn(User.SAUL);
 	}
 
 //========================================================================================
